@@ -2283,18 +2283,15 @@ https://github.com/openclaw/skills/tree/main/skills/gmail"
       if (i === idx) s.classList.add('active');
     });
     current = idx;
-
-    // Scroll ke section aktif dengan offset navbar + tabnav
-    const activeSection = document.getElementById('sec-' + idx);
-    if (activeSection) {
-      const navHeight = window.innerWidth <= 768 ? 52 : 60;
-      const tabNavHeight = 56;
-      const offset = navHeight + tabNavHeight + 16;
-      const top = activeSection.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
-    }
+    requestAnimationFrame(() => {
+      const tabNav = document.querySelector('.tab-nav');
+      if (tabNav) {
+        const top = tabNav.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
   }
-  
+
   function copyCode(btn, text) {
     navigator.clipboard.writeText(text).then(() => {
       btn.textContent = 'COPIED!';
