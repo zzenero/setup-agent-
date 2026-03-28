@@ -679,6 +679,189 @@
   }
   .migrate-items li:last-child { border-bottom: none; }
   .migrate-items li::before { content: '→'; color: var(--accent3); font-family: var(--mono); font-size: 11px; flex-shrink: 0; }
+
+  /* ========================================
+     RESPONSIVE — semua ukuran HP
+     ======================================== */
+
+  /* Tablet landscape & kecil (max 768px) */
+  @media (max-width: 768px) {
+    /* Nav — sembunyikan link teks, tapi tetap ada logo */
+    nav {
+      padding: 0 1.25rem;
+      height: 52px;
+    }
+    .nav-links { display: none; }
+    .nav-logo { font-size: 12px; }
+
+    /* Hero */
+    .hero {
+      padding: 80px 1.25rem 48px;
+    }
+    h1 { font-size: clamp(1.8rem, 7vw, 2.8rem); }
+    .hero-desc { font-size: 14px; }
+
+    /* Progress bar — hanya tampil circle, label disembunyikan */
+    .progress-bar { padding: 0 1.25rem; margin-bottom: 48px; }
+    .prog-label { display: none; }
+    .prog-circle { width: 30px; height: 30px; font-size: 10px; }
+
+    /* Main padding */
+    .main { padding: 0 1.25rem 80px; }
+
+    /* Tab nav sticky */
+    .tab-nav {
+      margin-left: -1.25rem;
+      margin-right: -1.25rem;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      top: 52px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      flex-wrap: nowrap;
+      gap: 6px;
+      margin-bottom: 28px;
+    }
+    .tab-nav::-webkit-scrollbar { display: none; }
+    .tab-nav-btn {
+      font-size: 10px;
+      padding: 6px 11px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Section header */
+    .section-header { gap: 12px; margin-bottom: 24px; }
+    .section-title-wrap h2 { font-size: 1.5rem; }
+    .section-subtitle { font-size: 11px; }
+
+    /* Step cards */
+    .step-card { padding: 14px 16px; gap: 12px; }
+    .step-title { font-size: 14px; }
+    .step-desc { font-size: 12px; }
+    .step-num-badge { width: 28px; height: 28px; font-size: 11px; }
+
+    /* Code blocks */
+    .code-content { font-size: 11px; padding: 12px 12px; }
+    .code-header { padding: 7px 12px; }
+
+    /* Nav buttons */
+    .nav-btns { flex-direction: column; gap: 10px; }
+    .nav-btn { width: 100%; justify-content: center; font-size: 11px; padding: 11px 16px; }
+
+    /* Compare table — scroll horizontal */
+    .compare-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    table { min-width: 480px; }
+    td, th { padding: 10px 12px; font-size: 11px; }
+
+    /* Footer */
+    footer { padding: 28px 1.25rem; font-size: 10px; }
+  }
+
+  /* HP kecil (max 480px) */
+  @media (max-width: 480px) {
+    /* Nav */
+    nav { padding: 0 1rem; height: 48px; }
+    .nav-logo { font-size: 11px; }
+
+    /* Hero */
+    .hero { padding: 68px 1rem 36px; }
+    h1 { font-size: clamp(1.6rem, 8vw, 2.2rem); letter-spacing: -0.01em; }
+    .hero-desc { font-size: 13px; margin-bottom: 24px; }
+    .hero-tag { font-size: 10px; margin-bottom: 16px; }
+    .chip { font-size: 10px; padding: 5px 10px; }
+
+    /* Progress */
+    .progress-bar { padding: 0 1rem; margin-bottom: 32px; }
+    .prog-circle { width: 26px; height: 26px; font-size: 9px; }
+    .prog-line { margin: 0 2px; }
+
+    /* Main */
+    .main { padding: 0 1rem 60px; }
+    .tab-nav {
+      margin-left: -1rem;
+      margin-right: -1rem;
+      padding-left: 1rem;
+      top: 48px;
+      gap: 5px;
+    }
+    .tab-nav-btn { font-size: 9px; padding: 5px 9px; }
+
+    /* Section */
+    .section-header { flex-direction: column; gap: 6px; margin-bottom: 20px; }
+    .section-num { font-size: 10px; align-self: flex-start; }
+    .section-title-wrap h2 { font-size: 1.35rem; }
+
+    /* Step card */
+    .step-card { padding: 12px 14px; gap: 10px; border-radius: 10px; }
+    .step-num-badge { width: 26px; height: 26px; font-size: 10px; border-radius: 6px; }
+    .step-title { font-size: 13px; }
+    .step-desc { font-size: 11.5px; line-height: 1.6; }
+
+    /* Code */
+    .code-content { font-size: 10.5px; padding: 10px; }
+    .code-lang { font-size: 9px; }
+    .copy-btn { font-size: 9px; padding: 3px 8px; }
+
+    /* Note/tip box */
+    .note-box, .tip-box { font-size: 11px; padding: 8px 10px; }
+
+    /* Provider grid (sudah 1 kolom dari 600px) */
+    .provider-card { padding: 16px; }
+    .provider-name { font-size: 15px; }
+    .provider-price { font-size: 11px; }
+    .provider-desc { font-size: 12px; }
+
+    /* Nav btns */
+    .nav-btn { font-size: 10px; padding: 10px 14px; }
+
+    /* Migrate grid */
+    .migrate-card { padding: 14px; }
+    .migrate-items li { font-size: 11.5px; padding: 4px 0; }
+
+    /* Footer */
+    footer { padding: 24px 1rem; font-size: 10px; line-height: 1.7; }
+  }
+
+  /* HP sangat kecil (max 360px — Galaxy A series, Redmi, dll) */
+  @media (max-width: 360px) {
+    .hero { padding: 60px 0.875rem 28px; }
+    h1 { font-size: 1.5rem; }
+    .main { padding: 0 0.875rem 48px; }
+    .tab-nav {
+      margin-left: -0.875rem;
+      margin-right: -0.875rem;
+      padding-left: 0.875rem;
+    }
+    .tab-nav-btn { font-size: 8.5px; padding: 5px 8px; }
+    .step-card { padding: 10px 12px; }
+    .code-content { font-size: 10px; }
+  }
+
+  /* Perbaiki banner seller & harga di HP kecil */
+  @media (max-width: 540px) {
+    .seller-price-box { text-align: left !important; width: 100%; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .seller-chat-btn { width: 100%; text-align: center; }
+  }
+
+  /* Skill grid jadi 1 kolom di HP */
+  @media (max-width: 540px) {
+    #skillGrid { grid-template-columns: 1fr !important; }
+  }
+
+  /* Touch device — besar tombol & hapus hover effect berat */
+  @media (hover: none) and (pointer: coarse) {
+    .step-card:hover::before { background: var(--border2); }
+    .provider-card:hover { transform: none; }
+    .nav-btn:hover { border-color: var(--border2); color: var(--muted); }
+    .nav-btn.primary:hover { background: rgba(0,229,255,0.08); }
+    .copy-btn { padding: 5px 12px; font-size: 11px; min-height: 32px; }
+    .tab-nav-btn { min-height: 36px; }
+    .nav-btn { min-height: 44px; }
+  }
 </style>
 </head>
 <body>
@@ -696,7 +879,21 @@
     <li><a href="#" onclick="showTab(3);return false;">Hermes</a></li>
     <li><a href="#" onclick="showTab(4);return false;">Migrate</a></li>
   </ul>
+  <!-- Hamburger untuk mobile -->
+  <button id="ham-btn" onclick="toggleMenu()" style="display:none;background:none;border:1px solid var(--border);border-radius:6px;padding:6px 10px;cursor:pointer;color:var(--muted);font-family:var(--mono);font-size:12px;letter-spacing:0.05em;transition:all 0.2s;" aria-label="Menu">☰ MENU</button>
 </nav>
+
+<!-- Mobile dropdown menu -->
+<div id="mob-menu" style="display:none;position:fixed;top:52px;left:0;right:0;z-index:99;background:rgba(10,11,15,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:12px 1.25rem 16px;">
+  <div style="display:flex;flex-direction:column;gap:4px;">
+    <a href="#" onclick="showTab(0);closeMob();return false;" style="font-family:var(--mono);font-size:12px;color:var(--muted);text-decoration:none;padding:10px 12px;border-radius:8px;border:1px solid transparent;transition:all 0.15s;" onmouseover="this.style.borderColor='var(--border)';this.style.color='var(--text)'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--muted)'">01 / Beli VPS</a>
+    <a href="#" onclick="showTab(1);closeMob();return false;" style="font-family:var(--mono);font-size:12px;color:var(--muted);text-decoration:none;padding:10px 12px;border-radius:8px;border:1px solid transparent;transition:all 0.15s;">02 / Setup Termius</a>
+    <a href="#" onclick="showTab(2);closeMob();return false;" style="font-family:var(--mono);font-size:12px;color:var(--muted);text-decoration:none;padding:10px 12px;border-radius:8px;border:1px solid transparent;transition:all 0.15s;">03 / Install OpenClaw</a>
+    <a href="#" onclick="showTab(3);closeMob();return false;" style="font-family:var(--mono);font-size:12px;color:var(--muted);text-decoration:none;padding:10px 12px;border-radius:8px;border:1px solid transparent;transition:all 0.15s;">04 / Install Hermes</a>
+    <a href="#" onclick="showTab(4);closeMob();return false;" style="font-family:var(--mono);font-size:12px;color:var(--muted);text-decoration:none;padding:10px 12px;border-radius:8px;border:1px solid transparent;transition:all 0.15s;">05 / Migrate ke Hermes</a>
+    <a href="#" onclick="showTab(5);closeMob();return false;" style="font-family:var(--mono);font-size:12px;color:var(--muted);text-decoration:none;padding:10px 12px;border-radius:8px;border:1px solid transparent;transition:all 0.15s;">06 / Skills & Plugin</a>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -742,6 +939,11 @@
     <div class="prog-circle">05</div>
     <span class="prog-label">Migrate</span>
   </div>
+  <div class="prog-line"></div>
+  <div class="prog-step" onclick="showTab(5)">
+    <div class="prog-circle">06</div>
+    <span class="prog-label">Skills</span>
+  </div>
 </div>
 
 <!-- MAIN -->
@@ -754,6 +956,7 @@
     <button class="tab-nav-btn" onclick="showTab(2)">03 / Install OpenClaw</button>
     <button class="tab-nav-btn" onclick="showTab(3)">04 / Install Hermes</button>
     <button class="tab-nav-btn" onclick="showTab(4)">05 / Migrate ke Hermes</button>
+    <button class="tab-nav-btn" onclick="showTab(5)">06 / Skills & Plugin</button>
   </div>
 
   <!-- SECTION 1: BELI VPS -->
@@ -1291,6 +1494,719 @@
 
     <div class="nav-btns">
       <button class="nav-btn" onclick="showTab(3)">← Install Hermes</button>
+      <button class="nav-btn primary" onclick="showTab(5)">Selanjutnya: Skills & Plugin →</button>
+    </div>
+  </div>
+
+  <!-- SECTION 6: SKILLS -->
+  <div class="section-block" id="sec-5">
+    <div class="section-header">
+      <div class="section-num">STEP 06</div>
+      <div class="section-title-wrap">
+        <h2>Skills & Plugin</h2>
+        <div class="section-subtitle">// 13.000+ skill komunitas — extend kemampuan OpenClaw & Hermes</div>
+      </div>
+    </div>
+
+    <!-- WHAT IS SKILL -->
+    <div class="step-card" style="margin-bottom:28px;border-color:rgba(0,229,255,0.15);background:rgba(0,229,255,0.03);">
+      <div class="step-num-badge" style="background:rgba(0,229,255,0.12);">?</div>
+      <div class="step-content">
+        <div class="step-title">Apa itu Skill?</div>
+        <div class="step-desc">Skill adalah modul/plugin yang memperluas kemampuan OpenClaw & Hermes. Dengan skill, AI assistant-mu bisa mengontrol Gmail, kalender, Spotify, smart home, menjalankan riset web, bahkan bikin konten — semua dari chat Telegram atau WhatsApp. Registry publik <strong style="color:var(--accent)">ClawHub</strong> punya <strong style="color:var(--accent)">13.729 skill</strong> per Februari 2026.</div>
+      </div>
+    </div>
+
+    <!-- CARA INSTALL SKILL -->
+    <div style="font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:0.15em;margin-bottom:14px;">// CARA INSTALL SKILL</div>
+    <div class="step-list" style="margin-bottom:36px;">
+      <div class="step-card">
+        <div class="step-num-badge">A</div>
+        <div class="step-content">
+          <div class="step-title">Install via ClawHub CLI (paling mudah)</div>
+          <div class="step-desc">Cara resmi install skill langsung dari registry ClawHub:</div>
+          <div class="code-wrap">
+            <div class="code-header">
+              <span class="code-lang">BASH</span>
+              <button class="copy-btn" onclick="copyCode(this,'clawhub install nama-skill')">COPY</button>
+            </div>
+            <div class="code-content"><span class="cmd">clawhub</span> <span class="arg">install</span> nama-skill
+
+<span class="cmt"># Contoh nyata:</span>
+<span class="cmd">clawhub</span> <span class="arg">install</span> gmail
+<span class="cmd">clawhub</span> <span class="arg">install</span> google-calendar
+<span class="cmd">clawhub</span> <span class="arg">install</span> spotify
+<span class="cmd">clawhub</span> <span class="arg">install</span> openclaw-free-web-search</div>
+          </div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num-badge">B</div>
+        <div class="step-content">
+          <div class="step-title">Install dari GitHub (clone manual)</div>
+          <div class="step-desc">Jika skill ada di repo GitHub, clone dan copy ke folder skills:</div>
+          <div class="code-wrap">
+            <div class="code-header">
+              <span class="code-lang">BASH</span>
+              <button class="copy-btn" onclick="copyCode(this,'git clone https://github.com/LeoYeAI/openclaw-master-skills.git\ncp -r openclaw-master-skills/skills/nama-skill ~/.openclaw/workspace/skills/')">COPY</button>
+            </div>
+            <div class="code-content"><span class="cmt"># Clone koleksi skill master (339+ skill)</span>
+<span class="cmd">git clone</span> https://github.com/LeoYeAI/openclaw-master-skills.git
+
+<span class="cmt"># Copy skill yang kamu mau ke folder OpenClaw</span>
+<span class="cmd">cp -r</span> openclaw-master-skills/skills/<span class="str">nama-skill</span> ~/.openclaw/workspace/skills/</div>
+          </div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num-badge">C</div>
+        <div class="step-content">
+          <div class="step-title">Install via chat (cara termudah!)</div>
+          <div class="step-desc">Cukup paste link GitHub skill ke chat Telegram/WhatsApp-mu dan minta AI untuk install. OpenClaw/Hermes akan handle otomatis di background:</div>
+          <div class="code-wrap">
+            <div class="code-header"><span class="code-lang">CHAT</span></div>
+            <div class="code-content"><span class="str">Kamu:</span> "install skill ini buat aku:
+https://github.com/openclaw/skills/tree/main/skills/gmail"
+
+<span class="str">AI:</span> "Oke, lagi install skill Gmail sekarang..."
+      → Selesai otomatis, langsung bisa dipakai!</div>
+          </div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num-badge">D</div>
+        <div class="step-content">
+          <div class="step-title">Aktifkan & cek skill yang terpasang</div>
+          <div class="step-desc">Setelah install, cek daftar skill aktif dan gunakan langsung:</div>
+          <div class="code-wrap">
+            <div class="code-header">
+              <span class="code-lang">BASH / CHAT</span>
+              <button class="copy-btn" onclick="copyCode(this,'openclaw skills\n# atau ketik di chat:\n/skills')">COPY</button>
+            </div>
+            <div class="code-content"><span class="cmt"># Di terminal:</span>
+<span class="cmd">openclaw</span> <span class="arg">skills</span>
+
+<span class="cmt"># Di chat Telegram/WhatsApp:</span>
+/skills                    <span class="cmt"># lihat semua skill</span>
+/nama-skill                <span class="cmt"># langsung pakai skill</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SKILL CATEGORIES -->
+    <div style="font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:0.15em;margin-bottom:14px;">// KATEGORI & LIST SKILL POPULER</div>
+
+    <!-- skill filter buttons -->
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;" id="skillFilter">
+      <button onclick="filterSkills('all')" class="sf-btn sf-active" style="font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:6px;border:1px solid rgba(0,229,255,0.3);background:rgba(0,229,255,0.08);color:var(--accent);cursor:pointer;letter-spacing:0.06em;">Semua</button>
+      <button onclick="filterSkills('produktivitas')" class="sf-btn" style="font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;letter-spacing:0.06em;">Produktivitas</button>
+      <button onclick="filterSkills('developer')" class="sf-btn" style="font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;letter-spacing:0.06em;">Developer</button>
+      <button onclick="filterSkills('komunikasi')" class="sf-btn" style="font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;letter-spacing:0.06em;">Komunikasi</button>
+      <button onclick="filterSkills('smarthome')" class="sf-btn" style="font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;letter-spacing:0.06em;">Smart Home</button>
+      <button onclick="filterSkills('riset')" class="sf-btn" style="font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;letter-spacing:0.06em;">Riset & Search</button>
+      <button onclick="filterSkills('finance')" class="sf-btn" style="font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;letter-spacing:0.06em;">Keuangan</button>
+      <button onclick="filterSkills('media')" class="sf-btn" style="font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;letter-spacing:0.06em;">Media & Hiburan</button>
+      <button onclick="filterSkills('devops')" class="sf-btn" style="font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;letter-spacing:0.06em;">DevOps</button>
+      <button onclick="filterSkills('ai')" class="sf-btn" style="font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;letter-spacing:0.06em;">AI Tools</button>
+      <button onclick="filterSkills('marketing')" class="sf-btn" style="font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;letter-spacing:0.06em;">Marketing</button>
+      <button onclick="filterSkills('automasi')" class="sf-btn" style="font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;letter-spacing:0.06em;">Automasi Web</button>
+      <button onclick="filterSkills('personal')" class="sf-btn" style="font-family:var(--mono);font-size:11px;padding:5px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;letter-spacing:0.06em;">Personal Dev</button>
+    </div>
+
+    <div id="skillGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:32px;">
+
+      <!-- PRODUKTIVITAS -->
+      <div class="sk-card" data-cat="produktivitas" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">📧</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Gmail</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">PRODUKTIVITAS</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Baca, kirim, balas, label email Gmail. Bisa filter dan arsip inbox dari chat.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install gmail</div>
+      </div>
+
+      <div class="sk-card" data-cat="produktivitas" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">📅</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Google Calendar</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">PRODUKTIVITAS</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Tambah, edit, lihat jadwal. AI bisa bikin reminder dan checkin jadwal harianmu otomatis.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install google-calendar</div>
+      </div>
+
+      <div class="sk-card" data-cat="produktivitas" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">✅</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Todoist</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">PRODUKTIVITAS</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Manajemen task Todoist via chat. Buat tugas, tandai selesai, lihat daftar to-do hari ini.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install openclaw-todoist</div>
+      </div>
+
+      <div class="sk-card" data-cat="produktivitas" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">📝</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Notion</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">PRODUKTIVITAS</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Kelola halaman, database, dan block Notion dari chat. Buat notes dan update database otomatis.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install nidhov01-notion</div>
+      </div>
+
+      <!-- DEVELOPER -->
+      <div class="sk-card" data-cat="developer" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🐙</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">GitHub CLI</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">DEVELOPER</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Kelola issues, PR, workflow GitHub. Bisa review kode, merge PR, cek CI/CD dari chat.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install nidhov01-github</div>
+      </div>
+
+      <div class="sk-card" data-cat="developer" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🗄️</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Database Admin</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">DEVELOPER</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Schema management, data operations, dan query optimization untuk PostgreSQL & Supabase.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install database-admin</div>
+      </div>
+
+      <div class="sk-card" data-cat="developer" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🖥️</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Filesystem Advanced</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">DEVELOPER</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Operasi file tingkat lanjut — listing, search isi file, batch processing, analisis direktori.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install filesystem</div>
+      </div>
+
+      <div class="sk-card" data-cat="developer" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">⚡</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Claude Code Skill</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">DEVELOPER</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Integrasi MCP (Model Context Protocol). Jalankan Claude Code dari chat, trigger loop coding otomatis.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install claude-code-skill</div>
+      </div>
+
+      <!-- KOMUNIKASI -->
+      <div class="sk-card" data-cat="komunikasi" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">✈️</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Telegram Bot API</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">KOMUNIKASI</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Design workflow bot Telegram, command-driven conversations, kirim pesan & media otomatis.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install telegram-bot-api</div>
+      </div>
+
+      <div class="sk-card" data-cat="komunikasi" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">💬</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">WhatsApp (Evolution API)</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">KOMUNIKASI</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Automasi WhatsApp penuh — kirim pesan, media, polling, carousel, kelola grup.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install evogo</div>
+      </div>
+
+      <div class="sk-card" data-cat="komunikasi" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">📧</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Google Workspace CLI</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">KOMUNIKASI</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Akses Gmail, Calendar, Drive, Contacts, Sheets, Docs, Slides, Tasks dalam satu skill terintegrasi.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install fsdfsd</div>
+      </div>
+
+      <!-- SMART HOME -->
+      <div class="sk-card" data-cat="smarthome" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🏠</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Home Assistant</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">SMART HOME</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Kontrol perangkat smart home, jalankan automasi, terima webhook events dari Home Assistant.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install home-assistant</div>
+      </div>
+
+      <div class="sk-card" data-cat="smarthome" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">💡</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Philips Hue</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">SMART HOME</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Kontrol lampu & scene Philips Hue via OpenHue CLI. Nyalain, matiin, ganti warna dari chat.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install hue-lights</div>
+      </div>
+
+      <div class="sk-card" data-cat="smarthome" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">😴</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Eight Sleep Pod</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">SMART HOME</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Kontrol Eight Sleep pods — status, suhu, alarm, dan jadwal tidur otomatis dari chat.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install eight-sleep</div>
+      </div>
+
+      <!-- RISET & SEARCH -->
+      <div class="sk-card" data-cat="riset" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🔍</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Free Web Search</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">RISET & SEARCH</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Web search gratis & privat via SearXNG self-hosted. Zero API key, zero biaya, privasi penuh.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install openclaw-free-web-search</div>
+      </div>
+
+      <div class="sk-card" data-cat="riset" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🤖</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Agent Deep Research</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">RISET & SEARCH</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Riset mendalam otomatis via Google Gemini. Kasih topik, dapat laporan komprehensif.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install agent-deep-research</div>
+      </div>
+
+      <div class="sk-card" data-cat="riset" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">📺</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">YouTube + Bilibili</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">RISET & SEARCH</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Fetch dan baca transcript dari video YouTube dan Bilibili. Rangkum video panjang otomatis.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install bilibili-youtube-watcher</div>
+      </div>
+
+      <!-- KEUANGAN -->
+      <div class="sk-card" data-cat="finance" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">📈</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Market Data</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">KEUANGAN</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Akses data pasar keuangan real-time. Cek harga saham, crypto, dan analisis market dari chat.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install market-data</div>
+      </div>
+
+      <div class="sk-card" data-cat="finance" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">💰</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Financial Reconciler</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">KEUANGAN</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Tracker keuangan personal privacy-first dengan SQLite lokal. Catat & analisis pengeluaran.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install financial-reconciler</div>
+      </div>
+
+      <!-- MEDIA & HIBURAN -->
+      <div class="sk-card" data-cat="media" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🎵</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Spotify</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">MEDIA & HIBURAN</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Kontrol playback Spotify, cari lagu, buat playlist, cek lagu yang sedang diputar dari chat.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install spotify</div>
+      </div>
+
+      <div class="sk-card" data-cat="media" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">📷</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">RTSP Camera</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">MEDIA & HIBURAN</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Capture frame atau klip dari kamera RTSP/ONVIF. Monitoring CCTV dari chat Telegram.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install rtsp-camera</div>
+      </div>
+
+      <!-- DEVOPS -->
+      <div class="sk-card" data-cat="devops" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🛡️</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">OpenClaw Guardian</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">DEVOPS</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Watchdog gateway — auto-monitor, self-repair, git rollback, daily snapshots, Discord alerts.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install openclaw-guardian</div>
+      </div>
+
+      <div class="sk-card" data-cat="devops" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">💾</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Backup & Restore</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">DEVOPS</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">One-click backup & restore workspace, credentials, skills, session history OpenClaw/Hermes.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install openclaw-backup</div>
+      </div>
+
+      <div class="sk-card" data-cat="devops" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🐳</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Docker Management</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">DEVOPS</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Kelola container Docker dari chat. Start, stop, rebuild, cek logs container via Telegram.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install docker-management</div>
+      </div>
+
+      <!-- AI TOOLS -->
+      <div class="sk-card" data-cat="ai" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🆓</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Free OpenRouter Models</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">AI TOOLS</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Kelola model AI gratis dari OpenRouter. Auto-ranking model terbaik, konfigurasi tanpa repot.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install add-top-openrouter-models</div>
+      </div>
+
+      <div class="sk-card" data-cat="ai" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🧠</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Agent Brain (Memory)</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">AI TOOLS</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Persistent memory lokal dengan SQLite. AI ingat konteks & preferensi kamu antar sesi.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install agent-brain</div>
+      </div>
+
+      <div class="sk-card" data-cat="ai" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🔒</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Skill Security Vetter</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">AI TOOLS</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Audit skill sebelum install — deteksi prompt injection, supply chain attack, malware payload.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install benlee-skillguard</div>
+      </div>
+
+      <div class="sk-card" data-cat="ai" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">⚡</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">AI Prompt Generator</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">AI TOOLS</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Generate prompt optimal untuk ChatGPT, Midjourney, dan model AI lain dari deskripsi singkat.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install ai-prompt-gen</div>
+      </div>
+
+      <div class="sk-card" data-cat="ai" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🤝</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Multi-Agent Collab</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">AI TOOLS</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Jalankan beberapa AI agent paralel untuk workstream berbeda sekaligus. Orkestrasi otomatis.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install ai-collab</div>
+      </div>
+
+      <!-- MARKETING -->
+      <div class="sk-card" data-cat="marketing" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">📈</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">SEO Audit</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">MARKETING</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Audit website untuk SEO, performa, keamanan, dan 15+ kategori isu. Laporan otomatis dari chat.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install competitor-analysis</div>
+      </div>
+
+      <div class="sk-card" data-cat="marketing" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">📣</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">AI Hunter Pro (Social)</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">MARKETING</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Otomatis ubah trending global jadi postingan viral untuk X (Twitter). Auto-post ke sosial media.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install ai-hunter-pro</div>
+      </div>
+
+      <div class="sk-card" data-cat="marketing" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🎯</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Google Ads Manager</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">MARKETING</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Kelola campaign Google Ads — audit, buat, dan optimasi ads langsung dari chat. 44 MCP tools.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install adwhiz</div>
+      </div>
+
+      <div class="sk-card" data-cat="marketing" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🛍️</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Amazon Product Scraper</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">MARKETING</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Ekstrak listing produk Amazon — judul, ASIN, harga, rating. Cocok buat riset produk & kompetitor.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install amazon-product-api-skill</div>
+      </div>
+
+      <div class="sk-card" data-cat="marketing" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🔑</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Rank Tracker (SEO)</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">MARKETING</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Monitor posisi keyword di Google, cek perubahan ranking, analisa SERP otomatis tiap hari.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install rank-tracker</div>
+      </div>
+
+      <div class="sk-card" data-cat="marketing" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🧲</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">B2B Lead Generator</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">MARKETING</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Generate leads B2B/B2C dengan scraping Google. Cari prospek, kontak, dan data bisnis otomatis.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install apify-lead-generation</div>
+      </div>
+
+      <!-- AUTOMASI WEB -->
+      <div class="sk-card" data-cat="automasi" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🌐</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">AnyCrawl Web Scraper</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">AUTOMASI WEB</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Scrape, crawl, dan search web apapun via AnyCrawl API. Ekstrak data dari situs manapun otomatis.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install anycrawl</div>
+      </div>
+
+      <div class="sk-card" data-cat="automasi" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🤖</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Auto Form Filler</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">AUTOMASI WEB</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Isi formulir web otomatis & upload file. Cocok untuk submit form berulang atau registrasi massal.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install autofillin</div>
+      </div>
+
+      <div class="sk-card" data-cat="automasi" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">📱</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Android ADB Controller</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">AUTOMASI WEB</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Kontrol perangkat Android via ADB. Analisis UI layout, tap, swipe, type teks dari chat AI.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install android-adb</div>
+      </div>
+
+      <div class="sk-card" data-cat="automasi" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">📖</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Text to Audio (TTS)</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">AUTOMASI WEB</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Baca halaman web atau artikel apapun dengan suara AI natural. Ekstrak konten dari URL lalu TTS.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install castreader</div>
+      </div>
+
+      <div class="sk-card" data-cat="automasi" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🔔</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">RSS 24h Briefing</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">AUTOMASI WEB</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Baca RSS/Atom feeds dari OPML list, fetch artikel 24 jam terakhir, dan generate briefing harian.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install ak-rss-24h-brief</div>
+      </div>
+
+      <!-- PERSONAL DEVELOPMENT -->
+      <div class="sk-card" data-cat="personal" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🌅</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">ADHD Daily Planner</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">PERSONAL DEV</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">AI bantu rencanain harimu: "plan my day" → dapat jadwal terstruktur, fokus, dan reminder otomatis.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install adhd-founder-planner</div>
+      </div>
+
+      <div class="sk-card" data-cat="personal" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">💪</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Habit Tracker</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">PERSONAL DEV</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Lacak kebiasaan harian via Beaver Habit Tracker API. Streak, catatan, dan progress semua dari chat.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install beaverhabits</div>
+      </div>
+
+      <div class="sk-card" data-cat="personal" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">😮‍💨</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Anxiety Relief Coach</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">PERSONAL DEV</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Kelola anxiety dengan grounding exercises dan teknik pernapasan. AI sebagai teman kesehatan mental.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install anxiety-relief</div>
+      </div>
+
+      <div class="sk-card" data-cat="personal" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">❓</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Daily Questions</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">PERSONAL DEV</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Kuesioner harian self-improving — AI belajar tentangmu dan secara otomatis menyesuaikan perilakunya.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install daily-questions</div>
+      </div>
+
+      <div class="sk-card" data-cat="personal" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color 0.2s;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="font-size:18px;">🏃</span>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);">Build Discipline</div>
+            <div style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:0.08em;">PERSONAL DEV</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;">Bangun disiplin kuat dengan habit stacking dan streak tracking. AI jadi accountability partner-mu.</div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--accent);background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.12);border-radius:5px;padding:4px 8px;">clawhub install build-discipline</div>
+      </div>
+
+    </div>
+
+    <!-- SUMBER SKILL -->
+    <div style="font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:0.15em;margin-bottom:14px;">// SUMBER SKILL & REFERENSI</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-bottom:32px;">
+      <a href="https://github.com/LeoYeAI/openclaw-master-skills" target="_blank" style="text-decoration:none;">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:all 0.2s;" onmouseover="this.style.borderColor='rgba(0,229,255,0.3)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">openclaw-master-skills</div>
+          <div style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:8px;">LeoYeAI · 339+ skill · update tiap Senin</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.5;">Koleksi skill terkurasi terbaik — AI tools, produktivitas, marketing, frontend, backend, DevOps. Install: <code style="color:var(--accent);font-family:var(--mono)">clawhub install openclaw-master-skills</code></div>
+        </div>
+      </a>
+      <a href="https://github.com/VoltAgent/awesome-openclaw-skills" target="_blank" style="text-decoration:none;">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:all 0.2s;" onmouseover="this.style.borderColor='rgba(0,229,255,0.3)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">awesome-openclaw-skills</div>
+          <div style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:8px;">VoltAgent · 5.400+ skill · dari ClawHub registry · ⭐ 41.3k GitHub stars</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.5;">Koleksi terbesar dengan 1M+ monthly views. Skill dikategorikan rapi dari registry resmi OpenClaw.</div>
+        </div>
+      </a>
+      <a href="https://clawhub.com" target="_blank" style="text-decoration:none;">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:all 0.2s;" onmouseover="this.style.borderColor='rgba(0,229,255,0.3)'" onmouseout="this.style.borderColor='var(--border)'">
+          <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">ClawHub (Registry Resmi)</div>
+          <div style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:8px;">clawhub.com · 13.729+ skill · VirusTotal scan</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.5;">Registry resmi OpenClaw. Setiap skill sudah discan VirusTotal. Install langsung via clawhub CLI.</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- SECURITY WARNING -->
+    <div style="display:flex;gap:12px;padding:16px 20px;background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.2);border-radius:12px;margin-bottom:28px;">
+      <span style="font-size:20px;flex-shrink:0;">⚠️</span>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:#d97706;margin-bottom:4px;">Peringatan Keamanan</div>
+        <div style="font-size:12px;color:#92400e;line-height:1.65;font-family:var(--mono);">Skill bisa mengandung prompt injection, tool poisoning, atau malware payload. Selalu cek source code sebelum install. Gunakan skill dari ClawHub yang sudah ada laporan VirusTotal-nya, atau pakai skill <strong>benlee-skillguard</strong> untuk audit otomatis sebelum install skill baru.</div>
+      </div>
+    </div>
+
+    <div class="nav-btns">
+      <button class="nav-btn" onclick="showTab(4)">← Migrate ke Hermes</button>
       <button class="nav-btn primary" style="cursor:default;opacity:0.6">Selesai! 🎉</button>
     </div>
   </div>
@@ -1305,6 +2221,53 @@
 <script>
   let current = 0;
   const total = 5;
+
+  function toggleMenu() {
+    const m = document.getElementById('mob-menu');
+    const b = document.getElementById('ham-btn');
+    const open = m.style.display === 'block';
+    m.style.display = open ? 'none' : 'block';
+    b.textContent = open ? '☰ MENU' : '✕ TUTUP';
+  }
+
+  function closeMob() {
+    document.getElementById('mob-menu').style.display = 'none';
+    document.getElementById('ham-btn').textContent = '☰ MENU';
+  }
+
+  function checkNav() {
+    const ham = document.getElementById('ham-btn');
+    const links = document.querySelector('.nav-links');
+    if (window.innerWidth <= 768) {
+      ham.style.display = 'block';
+      links.style.display = 'none';
+    } else {
+      ham.style.display = 'none';
+      links.style.display = 'flex';
+      document.getElementById('mob-menu').style.display = 'none';
+    }
+  }
+
+  checkNav();
+  window.addEventListener('resize', checkNav);
+
+  function filterSkills(cat) {
+    document.querySelectorAll('.sk-card').forEach(card => {
+      if (cat === 'all' || card.dataset.cat === cat) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    document.querySelectorAll('.sf-btn').forEach(btn => {
+      btn.style.borderColor = 'var(--border)';
+      btn.style.background = 'var(--surface)';
+      btn.style.color = 'var(--muted)';
+    });
+    event.target.style.borderColor = 'rgba(0,229,255,0.3)';
+    event.target.style.background = 'rgba(0,229,255,0.08)';
+    event.target.style.color = 'var(--accent)';
+  }
 
   function showTab(idx) {
     document.querySelectorAll('.section-block').forEach((s, i) => {
